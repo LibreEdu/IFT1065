@@ -1,2 +1,22 @@
 \section*{Question 1}
-test
+
+\noindent
+{\large \textbf{a)}}
+\emph{En utilisant les lois généralisées de De Morgan, montrez que $\overline{A \cup B \cup C} = \overline{A} \cap \overline{B} \cap \overline{C}$.}
+
+\bigskip
+\fbox{\(\Rightarrow\)}
+\begin{align*}
+	\forall x, x \in \overline{A \cup B \cup C} & \Rightarrow (x \notin A) \wedge (x \notin B) \wedge (x \notin C) \\
+	                                            & \Rightarrow (x \in \overline{A}) \wedge (x \in \overline{B}) \wedge (x \in \overline{C}) \\
+	                                            & \Rightarrow x \in \overline{A} \cap \overline{B} \cap \overline{C} \\
+\end{align*}
+
+\bigskip
+\fbox{\(\Leftarrow\)}
+\begin{align*}
+	\overline{A} \cap \overline{B} \cap \overline{C} & \Rightarrow (x \in \overline{A}) \wedge (x \in \overline{B}) \wedge (x \in \overline{C}) \\
+	                                                 & \Rightarrow (x \notin A) \wedge (x \notin B) \wedge (x \notin C) \\
+	                                                 & \Rightarrow x \notin A \cup B \cup C \\
+	                                                 & \Rightarrow x \in A \overline{A} \cap \overline{B} \cap \overline{C}
+\end{align*}
