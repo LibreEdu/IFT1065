@@ -1,1 +1,36 @@
 \section*{Question 3}
+\noindent
+\emph{Cas de base : 1 carré }
+\begin{align*}
+	n - 1 &= nombre\ de\ coupe\\
+	1 - 1 &= 0
+\end{align*}
+\noindent
+\emph{effectivement si nous avons un carré, nous devons le diviser zéro fois.}
+
+\bigskip
+\noindent
+\emph{Étape inductive : }
+
+\noindent
+\emph{Posons un rectangle de k morceaux tel que $ 1 \leq k < n$. Le rectangle k est de base k\textsubscript{2} et de hauteur k\textsubscript{1}, donc}
+
+\begin{align*}
+k = k_1 \times k_2
+\end{align*}
+
+\noindent
+\emph{Si nous effectuons une coupure au rectangle k d'une valeur j. Nous avons deux nouveaux rectangles :}
+\begin{align*}
+&premier\ rectangle = k_1 \times j\\
+&deuxième\ rectangle = k_1 \times (k_2 - j)
+\end{align*}
+
+\noindent
+\emph{Ainsi, pour calculer le nombre de coupure à faire pour ces nouveaux rectangles : }
+\begin{align*}
+&(k_1 \times j) - 1 + (k_1(k_2 \times j)-1) + 1\\
+&= k_1 j - 1 + k_1 k_2 - k_1 j - 1 + 1\\
+&= k_1 k_2 - 1\\
+&= k - 1
+\end{align*}
