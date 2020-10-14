@@ -1,0 +1,43 @@
+\section*{Question 1}
+\emph{Montrez que \( A \subseteq B \Rightarrow A \cap C \subseteq B \cap C\). Pour cela réécrivez l’expression en utilisant quantificateurs et prédicats.}
+
+\bigskip
+Preuve par contradiction. Nous allons supposer que la négation de la proposition est vraie, pour en arriver à une contradiction.
+
+Réécrivons chaque terme avec quantificateurs et prédicats. On a :
+
+\begin{align}
+	A \subseteq B \quad               & \equiv \quad \vee x, \; x \in A \; \Rightarrow \; x \in B                                           \\
+	A \cap C \subseteq B \cap C \quad & \equiv \quad \vee x, \; x \in A \; \wedge \; x \in C \; \Rightarrow \; x \in B \; \wedge \; x \in C
+\end{align}
+
+L’énoncé peut donc se réécrire \( (1) \Rightarrow (2) \). Étudions la négation de cette expression. On sait que \( \neg (p \Rightarrow q) \equiv p \wedge \neg q\). Il suffit donc de trouver la valeur de \( (1) \wedge \neg (2)\). L’expression (2) est de la forme \((3) \Rightarrow (4)\), avec
+
+\begin{align}
+	x \in A \; \wedge \; x \in C \\
+	x \in B \; \wedge \; x \in C
+\end{align}
+
+On a : \( \neg (2) \equiv (3) \wedge \neg (4)\), avec \(\neg (4) \equiv x \notin B \vee x \notin C\). Ce qui donne que 
+
+\[ \neg (2) \quad \equiv \quad (x \in A \; \wedge \; x \in C) \wedge (x \notin B \vee x \notin C) \]
+
+Revenons sur la première partie de la proposition, l’équation (1).
+
+\begin{align*}
+	(1)   \quad & \equiv \quad x \in A \; \Rightarrow \; x \in B                    \\
+	            & \equiv \quad \neg \neg (\equiv x \in A \; \Rightarrow \; x \in B) \\
+	            & \equiv \quad \neg (x \in A \wedge x \notin B )                    \\
+	            & \equiv \quad  x \notin A \vee x \in B
+\end{align*}
+
+Finalement, on a
+
+\begin{align*}
+	(1) \wedge \neg (2) \quad & \equiv \quad (x \notin A \vee x \in B)  \wedge  (x \in A \; \wedge \; x \in C) \wedge (x \notin B \vee x \notin C)                                      \\
+	                          & \equiv \quad (x \notin A \vee x \in B)  \wedge  x \in A \; \wedge \; x \in C \wedge (x \notin B \vee x \notin C)                                        \\
+	                          & \equiv \quad (x \notin A \vee x \in B)  \wedge  x \in A \; \wedge \; x \in C \wedge (x \notin B \vee x \notin C)                                        \\ %& \equiv \quad [(x \notin A \vee x \in B)  \wedge  x \in A ]\; \wedge \; [x \in C \wedge (x \notin B \vee x \notin C)]
+	                        & \equiv \quad [(x \notin A \vee x \in B)  \wedge  x \in A ]\; \wedge \; [x \in C \wedge (x \notin B \vee x \notin C)]                                    \\ %& \equiv \quad [(x \notin A  \wedge  x \in A) \vee (x \in B \wedge  x \in A) ]\; \wedge \; [(x \in C \wedge x \notin B) \vee (x \in C \wedge x \notin C)]
+	                         & \equiv \quad [(x \notin A  \wedge  x \in A) \vee (x \in B \wedge  x \in A) ]\; \wedge \; [(x \in C \wedge x \notin B) \vee (x \in C \wedge x \notin C)] \\ & \equiv \quad (x \in B \wedge  x \in A) \; \wedge \; (x \in C \wedge x \notin B)
+	%                          \equiv \quad (x \in B \wedge  x \in A) \; \wedge \; (x \in C \wedge x \notin B)
+\end{align*}
