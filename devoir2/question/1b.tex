@@ -3,15 +3,24 @@
 
 \bigskip
 
-On suppose que la proposition \( A \subseteq B \) est vraie. Pour tout x appartenant à l’intersection des ensembles A et B, est-ce que x appartient à l’intersection des ensembles B et C ?
+On suppose que la proposition \( A \subseteq B \) est vraie. Pour tout x appartenant à l’intersection des ensembles A et C, est-ce que x appartient à l’intersection des ensembles B et C ?
 
 \begin{equation}
-	x \in A \cap C \quad \equiv \quad x \in A \; \wedge \; x \in C
+	\forall x, \; x \in A \cap C \quad \equiv \quad \forall x, \; x \in A \; \wedge \; x \in C
 	\label{q1-eq1}
 \end{equation}
 
 Or, nous avons supposé que \( A \subseteq B \), donc si x est un élément de l’ensemble A, alors x est un élément de l’ensemble B. La partie de droite de l’équation (\ref{q1-eq1}) peut donc se réécrire :
 
-\[x \in B \; \wedge \; x \in C\]
+\[\forall x, \; x \in B \; \wedge \; x \in C\]
 
-Par conséquent, x est un élément de \( B \cap C \). \quad $\square$
+On a donc, \(\forall x, \; x \in B \cap C\). \quad $\square$
+
+%\bigskip
+%Cela dit, l’exercice n’était pas de démontrer cette implication, mais juste de \emph{réécrire} \og l’expression en utilisant quantificateurs et prédicats \fg{}.
+%
+%\begin{align*}
+%	A \subseteq B \quad               & \equiv \forall x, \; x \in A \; \Rightarrow \; x \in B                                                                                                  &  \\
+%	A \cap C \subseteq B \cap C \quad & \equiv \forall x, \; x \in A \; \wedge \; x \in C \; \Rightarrow \; x \in B \; \wedge \; x \in C \\
+%	A \subseteq B \Rightarrow A \cap C \subseteq B \cap C & \equiv (\forall  x, \; x \in A \; \Rightarrow \; x \in B) \Rightarrow (\forall \vee x, \; x \in A \; \wedge \; x \in C \; \Rightarrow \; x \in B \; \wedge \; x \in C)
+%\end{align*}
