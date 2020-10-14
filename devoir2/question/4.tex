@@ -1,1 +1,55 @@
 \section*{Question 4}
+
+\emph{Prouvez ou infirmez : \((A \times B) \cup (C \times D) = \overline{(\overline{A} - C)} \times  \overline{(\overline{B} - D)} \). Justifier votre réponse.}
+
+\bigskip
+Nous allons infirmer cette proposition. Pour cela, trouvons un contrexemple.
+
+\medskip
+Considérons l’univers : \(U = \{A, B, C, D\}\). Et les quatre ensembles suivants:
+
+\begin{align*}
+	A & = \{A\} \\
+	B & = \{B\} \\
+	C & = \{C\} \\
+	C & = \{D\}
+\end{align*}
+
+\medskip
+On a :
+\begin{align*}
+	(A \times B) & = \{(A, B)\} \\
+	(C \times D) & = \{(C, D)\}
+\end{align*}
+
+
+
+\medskip
+Ce qui donne pour la partie gauche de notre égalité :
+
+\[(A \times B) \cup (C \times D) = \{(A, B), (C, D)\}\]
+
+\smallskip
+Maintenant, considérons la partie droite de notre égalité. On a : 
+\begin{align*}
+	(A \times B) & = \{(A, B)\} \\
+	(C \times D) & = \{(C, D)\}
+\end{align*}
+
+
+\begin{align*}
+	\overline{A} -C & = \{(A, B)\} \\
+	(C \times D) & = \{(C, D)\}
+\end{align*}
+
+
+\smallskip
+On a donc :
+
+\(\overline{A} = \{B, C, D\}\)
+
+\(\overline{B} = \{A, C, D\}\)
+
+\(\overline{C} = \{A, B, D\}\)
+
+\(\overline{D} = \{A, B, C\}\)
