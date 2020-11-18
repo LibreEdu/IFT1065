@@ -1,6 +1,17 @@
 \section*{Question 3}
 \noindent
 \emph{Transitivité :}
-\bigskip
 
 Si$\ R_1 = \{(1,1), (2,2), (1,2), (2,1)\}\ et\ R_2 = \{(1,1), (5,5), (1,5), (5,1)\}$. Donc, $\ R_1 \cup R_2 = \{(1,1), (2,2), (1,2), (2,1), (5,5), (1,5), (5,1)\}$. L'union des  deux relations est bien réflexive et symétrique, mais pas transitive. Puisque $\ (2,1)\in (1,5) \in R_1,\ mais\ (2,5) \notin R_1 \cup R_2$.
+
+\bigskip
+
+\emph{Réflexivité :}
+
+$\forall x\in X$, si$\ x\in R_1$, on a que$\ xR_1x \in R_1$ par réflexivité. De même si$\ x\in R_2$ on a que$\ xR_2x \in R_2$ par réflexivité. Finalement, on a que$\ x \in R_1$ et$\ x \in R_2$. Donc,$\ x \in R_1\cup R_2$.
+
+\bigskip
+
+\emph{Symétrie : }
+
+$\forall x_n \in X \mid n \in \mathbb{N}$, si$\ x_n \in R_1$ et$\ x_{n-1} \in R_1$ alors$\ (x_n,x_{n-1}) \in R_1$ et$\ (x_{n-1}, x_n) \in R_1$ aussi par symétrie. De même, si$\ x_n \in R_2$ et$\ x_{n-1} \in R_2$ alors$\ (x_n,x_{n-1}) \in R_2$ et$\ (x_{n-1}, x_n) \in R_2$ aussi par symétrie. On a que$\ (x_n, x_{n-1}) \in R_1$,$\ (x_{n-1}, x_n) \in R_1$ et$\ R_2$, mais aussi que$\ (x_{n-1}, x_n) \in R_1$ et$\ R_2$. Donc,$\ (x_n, x_{n-1})$ et$\ (x_{n-1}, x_n) \in R_1 \cup R_2$.
