@@ -2,16 +2,17 @@
 \noindent
 \emph{Transitivité :}
 
-Si$\ R_1 = \{(1,1), (2,2), (1,2), (2,1)\}\ et\ R_2 = \{(1,1), (5,5), (1,5), (5,1)\}$. Donc, $\ R_1 \cup R_2 = \{(1,1), (2,2), (1,2), (2,1), (5,5), (1,5), (5,1)\}$. L'union des  deux relations est bien réflexive et symétrique, mais pas transitive. Puisque $\ (2,1)\in (1,5) \in R_1,\ mais\ (2,5) \notin R_1 \cup R_2$.
+Si$\ R_1 = \{(1,1), (2,2), (1,2), (2,1)\}\ et\ R_2 = \{(1,1), (5,5), (1,5), (5,1)\}$. Donc, $\ R_1 \cup R_2 = \{(1,1), (2,2), (1,2), (2,1), (5,5), (1,5), (5,1)\}$. L'union des  deux relations n'est pas transitive. Puisque$\ (2,1) \in R_1\ et\ (1,5) \in R_2,\ mais\ (2,5) \notin R_1 \cup R_2$.
 
 \bigskip
 
 \emph{Réflexivité :}
 
-$\forall x\in X$, si$\ x\in R_1$, on a que$\ xR_1x \in R_1$ par réflexivité. De même si$\ x\in R_2$ on a que$\ xR_2x \in R_2$ par réflexivité. Finalement, on a que$\ x \in R_1$ et$\ x \in R_2$. Donc,$\ x \in R_1\cup R_2$.
+$\forall x\in X$,$\ xR_1x \in R_1$ parce que $R_1$ est réflexif. De même $xR_2x \in R_2$ parce que $R_2$ est réflexif. Finalement, on a que$\ xR_1x \in R_1$ et$\ xR_2x \in R_2$. Donc,$\ (x,x) \in R_1\cup R_2$.
 
 \bigskip
 
 \emph{Symétrie : }
 
-$\forall x_n \in X \mid n \in \mathbb{N}$, si$\ x_n \in R_1$ et$\ x_{n-1} \in R_1$ alors$\ (x_n,x_{n-1}) \in R_1$ et$\ (x_{n-1}, x_n) \in R_1$ aussi par symétrie. De même, si$\ x_n \in R_2$ et$\ x_{n-1} \in R_2$ alors$\ (x_n,x_{n-1}) \in R_2$ et$\ (x_{n-1}, x_n) \in R_2$ aussi par symétrie. On a que$\ (x_n, x_{n-1}) \in R_1$,$\ (x_{n-1}, x_n) \in R_1$ et$\ R_2$, mais aussi que$\ (x_{n-1}, x_n) \in R_1$ et$\ R_2$. Donc,$\ (x_n, x_{n-1})$ et$\ (x_{n-1}, x_n) \in R_1 \cup R_2$.
+$\forall x,y \in X$, si$\ (x,y)\ R_1$ alors$\ (y,x) \in R_1$ parce que $R_1$ est symétrie. De même, si$\ (x,y) \in R_2$ alors$\ (y,x) \in R_2$ parce que $R_2$ est symétrie. Si$\ (x, y) \in R_1$ ou $R_2$, alors$\ (y,x) \in R_1$ ou$\ R_2$. Donc,$\ (x, y)$ et
+$\ (y,x) \in R_1 \cup R_2$.
