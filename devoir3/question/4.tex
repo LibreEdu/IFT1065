@@ -7,3 +7,16 @@ On va raisonner du point de vue de la place, c’est la place qui choisit la per
 Raisonnement plus mathématique : l’ordre est important, c’est le nombre de 4-permutations d’un ensemble de 8 personnes.
 
 \[P(8,4) = \frac{8!}{(8-4)!}\]
+
+\subsection*{(b)}
+On prend Bob, on a le choix entre 4 places. Pour la place suivante on a le choix entre 7 personnes, puis 6 pour la place suivante et 5 pour la dernière place. On a donc $ 4 \times 7 \times 6 \times 5 = 840$ arrangements qui contiennent Bob.
+
+\subsection*{(c)}
+On prend Bob, on a le choix entre 4 places. Puis on prend Céline, on a le choix entre 3 place. Pour la place suivante on a le choix entre 6 personnes, puis 5 pour la dernière place. On a donc $ 4 \times 3 \times 6 \times 5 = 360$ arrangements qui contiennent Bob.
+
+\subsection*{(d)}
+On peut avoir ou Bob, ou Céline ou les deux. C’est tous les arrangements sauf celles qui contiennent ni Bob ni Céline.
+
+Arrangements contenant ni Bob ni Céline : $ 6 \times 5 \times 4 \times 3 = 360$. C’est le même raisonnement que à la question (a).
+
+Arrangements contenant Bob ou Céline $=$ tous les arrangements de la question (a) $-$  arrangements contenant ni Bob ni Céline. On a donc $1680-360 = 1320 $ arrangements qui contiennent Bob ou Céline.
