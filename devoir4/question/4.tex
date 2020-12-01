@@ -13,5 +13,8 @@ Considérons la deuxième moitié de la somme, les termes allant de $\left\lceil
 
 Chacun des $\left\lceil \frac{n^3}{2} \right\rceil$ termes de droite est supérieur à $\left\lceil\frac{n^3+1}{2}\right\rceil$. On a donc :
 
-\[ f(n) \geq \left\lceil\frac{n^3}{2}\right\rceil \cdot \left\lceil\frac{n^3+1}{2}\right\rceil\]
+\[ f(n) \geq \left\lceil\frac{n^3}{2}\right\rceil \cdot \left\lceil\frac{n^3+1}{2}\right\rceil \geq \frac{n^3}{2} \cdot \frac{n^3}{2} = \frac{n^6}{4}\]
 
+$f(n) = \Omega (n^6)$
+
+$f(n) = \mathrm{O} (n^6)$ et $f(n) = \Omega (n^6)$, donc  $f(n) = \Theta (n^6)$.
