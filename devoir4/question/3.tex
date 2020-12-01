@@ -1,30 +1,52 @@
 \section*{Question 3}
-On va le faire par récurrence. Pour cela, nous avons besoin d’une procédure qui permet d’extraire une chaine de caractère.
+On va l’algorithme faire par récurrence. Pour cela, nous avons besoin d’une procédure qui permet d’extraire une chaine de caractère.
 
-\subsection*{Algorithme Sous-chaine}
-\SetKwProg{mypproc}{Procédure Sous-chaine}{(chaine, debut, fin)}{Fin\ Sous-chaine}
+Convention :
+
+\begin{tabular}{l@{ : }l}
+	Opérateur d’égalité        & $=$          \\
+	Opérateur d’affectation    & $\leftarrow$ \\
+	Opérateur de concaténation & $+$
+\end{tabular}
+
+\subsection*{Algorithme SousChaine}
+%https://ctan.math.ca/tex-archive/macros/latex/contrib/algorithm2e/tex/algorithm2e.sty
+\SetKw{KwTo}{à}
+
 \begin{procedure}
-
+	\SetKwProg{procSousChaine}{Procédure SousChaine}{}{Fin\ SousChaine}
+	
 	\Res{Extrait une partie d’une chaine de caractères}
 	\Entree{Une chaine de caractères, l’index du premier caractère, l’index du dernier élément}
 	\Sortie{La chaine de caractères entre les deux index}
-	\mypproc{}{
-		sous-chaine = ""\;
-		\Pour{$i\leftarrow$ debut \KwTo Fin}{
-		aaa\;}
-}
-	%\myproc{\proc{}}{
-	%\caption{myproc()}
+	\procSousChaine{(chaine, debut, fin)}{
+		$sousChaine \leftarrow$ "" \;
+		\Pour{$index\leftarrow$ debut \KwTo fin}{
+			$sousChaine \leftarrow sousChaine + chaine[index]$ \;
+		}
+		\Retour $sousChaine$ \;
+	}
+\end{procedure}
+
+\subsection*{Algorithme InverserChaine}
+\begin{procedure}
+	\SetKwProg{procInverserChaine}{Procédure InverserChaine}{}{Fin\ InverserChaine}
 	
-%	\Entree{Un Graphe G, Ensemble de Sommets X}
-%	\Sortie{Liste de sommets: ensemble dominant minimum}
-%	$n \leftarrow0 $ \;
-%	$u \leftarrow 3081,45 $ \;
-%	\Tq{$u<k$}{
-%	$u \leftarrow 1,04 \times u $ \;
-%	$n \leftarrow n+1 $ \;
-%	}
-%}
-
-
+	\Res{Inverse les caractères d’une chaine de caractères}
+	\Entree{Une chaine de caractères}
+	\Sortie{La même chaine, mais inversée}
+	\procInverserChaine{(chaine)}{
+		$longueur \leftarrow len(chaine)$ \;
+		\Si{longueur = 1}{
+			\Retour $chaine$ \;
+		}\SinonSi{longueur = 2}{
+			\Retour $chaine[2] + chaine[1]$ \;
+		}\Sinon{
+			$dernierCaractere \leftarrow chaine[longueur]$ \;
+			$premierCaractere \leftarrow chaine[1]$ \;
+			$leReste \leftarrow SousChaine(chaine, 2, longueur-1)$ \;
+			\Retour $ dernierCaractere + InversChaine(leReste) + premierCaractere$ \;
+		}
+		
+	}
 \end{procedure}
