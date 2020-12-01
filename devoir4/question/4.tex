@@ -1,3 +1,4 @@
+\newpage
 \section*{Question 4}
 $f(n)$ est la somme des $n^3$ premiers termes. Il y a en tout $n^3$ termes.
 
@@ -7,9 +8,9 @@ $f(n)$ est la somme des $n^3$ premiers termes. Il y a en tout $n^3$ termes.
 
 On a donc $f(n) = \mathrm{O} (n^6)$.
 
-Considérons la deuxième moitié de la somme, les termes allant de $\left\lceil \frac{n^3+2}{2} \right\rceil$ à $n^3$. On a :
+Considérons la deuxième moitié de la somme, les termes allant de $\left\lceil \frac{n^3+1}{2} \right\rceil$ à $n^3$. On a :
 
-\[1 + 2 + 3 + \dots + n^3 \geq \left\lceil\frac{n^3+2}{2}\right\rceil + \dots + n^3 -1 + n^3\]
+\[1 + 2 + 3 + \dots + n^3 \geq \left\lceil\frac{n^3+1}{2}\right\rceil + \dots + n^3 -1 + n^3\]
 
 Chacun des $\left\lceil \frac{n^3}{2} \right\rceil$ termes de droite est supérieur à $\left\lceil\frac{n^3+1}{2}\right\rceil$. On a donc :
 
